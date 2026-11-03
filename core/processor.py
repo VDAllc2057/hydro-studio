@@ -10,7 +10,7 @@ def ingest_and_process_streamflow(df: pd.DataFrame, date_col: str, q_col: str) -
     data[date_col] = pd.to_datetime(data[date_col])
     data = data.sort_values(by=date_col).reset_index(drop=True)
     
-    # 1. Enforce physical flow bounds: Q >= 0 (remove negative flows)
+    # 1. Enforce physical flow bounds: Q >= 0 (remove negative flows_v2)
     data = data[data[q_col] >= 0].copy()
     
     # 2. Temporal continuity check: enforce strict dt = 1 day without synthetic interpolation
