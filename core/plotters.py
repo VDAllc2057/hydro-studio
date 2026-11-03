@@ -320,7 +320,7 @@ def plot_mod05_antecedent(df: pd.DataFrame, station_name: str = "Streamflow Stat
     return local_env.get("fig", plt.gcf()), code
 
 # ==========================================
-# MOD-06: Sequential Flow Duration & Persistence
+# MOD-06: Sequential Flow Duration & Persistence_v2
 # ==========================================
 def get_mod06_code(station_name: str) -> str:
     return f"""import matplotlib.pyplot as plt
